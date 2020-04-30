@@ -524,7 +524,7 @@ mod platform {
     }
 }
 
-#[cfg(windows)]
+#[cfg(not(unix))]
 mod platform {
     use mio::Ready;
 
