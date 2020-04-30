@@ -789,6 +789,19 @@ mod platform {
     }
 }
 
+#[cfg(not(any(windows, unix)))]
+mod platform {
+    use mio::Ready;
+
+    pub fn hup() -> Ready {
+        Ready::empty()
+    }
+
+    pub fn is_hup(_: &Ready) -> bool {
+        false
+    }
+}
+
 // ===== impl SetFallbackError =====
 
 impl fmt::Display for SetFallbackError {

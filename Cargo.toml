@@ -21,3 +21,6 @@ members = [
   "tokio-udp",
   "tokio-uds",
 ]
+
+[patch.crates-io]
+mio = { git = "https://github.com/tomaka/mio", branch = "0.6-wasi" }
