@@ -118,6 +118,10 @@ mod imp;
 #[cfg(windows)]
 mod imp;
 
+#[path = "wasi.rs"]
+#[cfg(target_os = "wasi")]
+mod imp;
+
 mod kill;
 
 use crate::io::{AsyncRead, AsyncWrite};

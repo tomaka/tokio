@@ -48,6 +48,7 @@ use std::io;
 /// }
 /// ```
 pub async fn ctrl_c() -> io::Result<()> {
-    os_impl::ctrl_c()?.recv().await;
-    Ok(())
+    unimplemented!()
+    /*os_impl::ctrl_c()?.recv().await;
+    Ok(())*/
 }

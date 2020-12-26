@@ -12,3 +12,8 @@ members = [
   "tests-build",
   "tests-integration",
 ]
+
+
+[patch.crates-io]
+mio = { git = "https://github.com/tomaka/mio", branch = "0.6-wasi" }
+net2 = { git = "https://github.com/tomaka/net2-rs", branch = "wasi-build" }   # TODO: remove after https://github.com/deprecrated/net2-rs/pull/111

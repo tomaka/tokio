@@ -22,7 +22,7 @@ mod sys {
     }
 }
 
-#[cfg(windows)]
+#[cfg(not(unix))]
 mod sys {
     use mio::Ready;
 

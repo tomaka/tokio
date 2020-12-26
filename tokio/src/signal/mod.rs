@@ -52,9 +52,13 @@ mod os {
     #[cfg(unix)]
     pub(crate) use super::unix::{OsExtraData, OsStorage};
 
+    #[cfg(target_os = "wasi")]
+    pub(crate) use super::wasi::{OsExtraData, OsStorage};
+
     #[cfg(windows)]
     pub(crate) use super::windows::{OsExtraData, OsStorage};
 }
 
 pub mod unix;
+pub mod wasi;
 pub mod windows;
